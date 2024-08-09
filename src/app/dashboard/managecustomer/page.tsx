@@ -73,7 +73,7 @@ export const data: Table[] = [
     gander: 'female',
     birth: '16 july 1998',
     email: 'riyagupta2321@getMaxListeners.com',
-    action: <Link href={`/customerdetails`} passHref>
+    action: <Link href={`/dashboard/managecustomer/customerdetails`} passHref>
       <AiOutlineEye className='text-gray-400 cursor-pointer text-[1rem]' />
     </Link>
   },
@@ -84,7 +84,7 @@ export const data: Table[] = [
     gander: 'female',
     birth: '16 july 1998',
     email: 'riyagupta2321@getMaxListeners.com',
-    action: <Link href={`/customerdetails`} passHref>
+    action: <Link href={`/dashboard/managecustomer/customerdetails`} passHref>
       <AiOutlineEye className='text-gray-400 cursor-pointer text-[1rem]' />
     </Link>
   },

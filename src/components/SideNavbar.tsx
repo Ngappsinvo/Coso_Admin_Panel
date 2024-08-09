@@ -45,13 +45,13 @@ export const SideNavbar = (props: Props) => {
         links={[
           {
             title: "Manage Customer",
-            href: '/',
+            href: '/dashboard/managecustomer',
             icon: User,
             variant: "default",
           },
           {
             title: "Manage Hosts",
-            href: '/managehosts',
+            href: '/dashboard/managehosts',
             icon: Home,
             variant: "ghost",
           },

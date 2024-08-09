@@ -140,7 +140,7 @@ export default function CustomerDeatils() {
                                         </p>
                                     </div>
                                     <div>
-                                        <Link href='/customertripdetails' className="text-sm font-semibold text-gray-600 underline">View Details</Link>
+                                        <Link href='/dashboard/managecustomer/customerdetails/customertripdetails' className="text-sm font-semibold text-gray-600 underline">View Details</Link>
                                     </div>
                                     <div className="flex items-center gap-2 mt-1">
                                         <Image src="/coso.png" alt="" width={18} height={18} />

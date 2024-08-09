@@ -102,7 +102,7 @@ export const data: Table[] = [
         <div className="flex-shrink-0 p-1 bg-[#e84c3d] flex items-center justify-center rounded-full">
           <AiOutlineClose className="text-white text-[0.5rem] font-semibold" />
         </div>
-        <Link href={`/managehosts/hostsdetails`} passHref>
+        <Link href={`/dashboard/managehosts/hostsdetails`} passHref>
           <AiOutlineEye className='text-gray-400 cursor-pointer text-[1rem]' />
         </Link>
       </div>
@@ -123,7 +123,7 @@ export const data: Table[] = [
         <div className="flex-shrink-0 p-1 bg-[#e84c3d] flex items-center justify-center rounded-full">
           <AiOutlineClose className="text-white text-[0.5rem] font-semibold" />
         </div>
-        <Link href={`/managehosts/hostsdetails`} passHref>
+        <Link href={`/dashboard/managehosts/hostsdetails`} passHref>
           <AiOutlineEye className='text-gray-400 cursor-pointer text-[1rem]' />
         </Link>
       </div>
