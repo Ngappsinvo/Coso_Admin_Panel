@@ -148,7 +148,7 @@ export default function HostsDeatils() {
                                         </p>
                                     </div>
                                     <div>
-                                        <Link href='/customertripdetails' className="text-xs font-semibold text-gray-600 underline">View Details</Link>
+                                        <Link href='/dashboard/managehosts/hostsdetails/hoststripdetails' className="text-xs font-semibold text-gray-600 underline">View Details</Link>
                                     </div>
                                     <div className="flex items-center gap-1 mt-1">
                                         <Image src="/coso.png" alt="" width={15} height={15} />
@@ -187,7 +187,7 @@ export default function HostsDeatils() {
                                         </p>
                                     </div>
                                     <div>
-                                        <Link href='/customertripdetails' className="text-xs font-semibold text-gray-600 underline">View Details</Link>
+                                        <Link href='/dashboard/managehosts/hostsdetails/hoststripdetails' className="text-xs font-semibold text-gray-600 underline">View Details</Link>
                                     </div>
                                     <div className="flex items-center gap-1 mt-1">
                                         <Image src="/coso.png" alt="" width={15} height={15} />

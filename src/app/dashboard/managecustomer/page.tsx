@@ -74,7 +74,7 @@ export const data: Table[] = [
     birth: '16 july 1998',
     email: 'riyagupta2321@getMaxListeners.com',
     action: <Link href={`/dashboard/managecustomer/customerdetails`} passHref>
-      <AiOutlineEye className='text-gray-400 cursor-pointer text-[1rem]' />
+      <AiOutlineEye className='text-gray-400 cursor-pointer text-[1rem] ml-4' />
     </Link>
   },
   {
@@ -85,7 +85,7 @@ export const data: Table[] = [
     birth: '16 july 1998',
     email: 'riyagupta2321@getMaxListeners.com',
     action: <Link href={`/dashboard/managecustomer/customerdetails`} passHref>
-      <AiOutlineEye className='text-gray-400 cursor-pointer text-[1rem]' />
+      <AiOutlineEye className='text-gray-400 cursor-pointer text-[1rem] ml-4' />
     </Link>
   },
   // ...

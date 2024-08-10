@@ -35,6 +35,7 @@ export default function CustomerTripDeatils() {
                     <span className="text-sm font-semibold">Trip ID: 98990</span>
                     <button className='border-2 border-[#e84c3d] p-1 rounded-lg text-sm font-medium text-[#e84c3d]'>Dwonload Invoice</button>
                 </div>
+
                 {/* Experience */}
                 <div className="py-5 px-5 rounded-md bg-[#fffff9]">
                     <div className='relative h-[5px] w-full bg-gradient-to-r from-[#832b22] via-[#be3e32] to-[#f0e5de] rounded-full mb-3'>
@@ -85,6 +86,7 @@ export default function CustomerTripDeatils() {
                         </div>
                     </div>
                 </div>
+
                 {/* Coso Trip */}
                 <div className='bg-[#fffff9] rounded-md mt-7 py-5 px-5'>
                     <div className="flex flex-col lg:flex-row items-start lg:items-center gap-5 ">
@@ -122,6 +124,7 @@ export default function CustomerTripDeatils() {
                         <p className='text-sm font-medium text-gray-500'>I am a music producer and art lover. Our earthly style luxury villas are thouthfullydesigned bring to you resort style living in your own personal abode.</p>
                     </div>
                 </div>
+
                 {/* Traveller Details */}
                 <div className="mt-7 py-5 px-5 rounded-md flex flex-col lg:flex-row items-start lg:items-center gap-5 bg-[#fffff9]">
                     <div className="w-full">
@@ -159,6 +162,7 @@ export default function CustomerTripDeatils() {
                         </div>
                     </div>
                 </div>
+
                 {/* Customer Details */}
                 <div className="mt-7 py-5 px-5 rounded-md flex flex-col lg:flex-row items-start lg:items-center gap-5 bg-[#fffff9]">
                     <div className="w-full lg:w-[170px] h-[150px] rounded-lg bg-white overflow-hidden">
@@ -204,10 +208,12 @@ export default function CustomerTripDeatils() {
                         </div>
                     </div>
                 </div>
+
                 {/* Arrival Guide */}
                 <div className='my-3'>
                     <span className='text-sm font-bold'>Arrival Guide</span>
                 </div>
+
                 <div className="container mx-auto px-5 py-5 bg-[#fffff9]">
                     <div className="relative">
                         {/* <!-- Roadmap Line --> */}
@@ -299,7 +305,7 @@ export default function CustomerTripDeatils() {
                     </div>
                     <div className='flex justify-between items-center'>
                         <span className='text-xs sm:text-sm font-bold'>Booking Amount</span>
-                        <span className='text-xs sm:text-sm font-semibold'>$ 20,123</span>
+                        <span className='text-xs sm:text-sm font-semibold text-[#e84c3d]'>$ 20,123</span>
                     </div>
                 </div>
 

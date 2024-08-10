@@ -57,7 +57,7 @@ export const SideNavbar = (props: Props) => {
           },
           {
             title: "Manage Tips & Booking",
-            href: '/managetips',
+            href: '/dashboard/managetrip',
             icon: Calendar,
             variant: "ghost",
           },
