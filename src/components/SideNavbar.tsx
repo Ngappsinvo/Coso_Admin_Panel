@@ -63,7 +63,7 @@ export const SideNavbar = (props: Props) => {
           },
           {
             title: "Manage Complaints",
-            href: '/managecomplaints',
+            href: '/dashboard/managecomplaints',
             icon: FileText,
             variant: "ghost",
           },
