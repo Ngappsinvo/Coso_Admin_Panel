@@ -2,8 +2,8 @@
 import React, { useState } from 'react';
 import 'react-datepicker/dist/react-datepicker.css';
 import PageTitle from "@/components/ui/PageTitle";
-import ChatWindow from '@/components/chattingapp/ChatWindow';
-import MessageInput from '@/components/chattingapp/MessageInput';
+import ChatWindow from '@/components/chatting/ChatWindow';
+import MessageInput from '@/components/chatting/MessageInput';
 
 export default function ComplaintsDetails() {
     const [messages, setMessages] = useState<{ id: number; text: string; avatar: string; timestamp: string; isSender: boolean }[]>([

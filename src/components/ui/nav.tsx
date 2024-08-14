@@ -35,7 +35,6 @@ export function Nav({ links, isCollapsed }: NavProps) {
                     className="group flex flex-col gap-4 py-5 pb-40 data-[collapsed=true]:py-2">
                     <nav className="grid gap-3 group-[[data-collapsed=true]]:justify-center group-[[data-collapsed=true]]:px-2">
                         {links.map((link, index) =>
-
                             isCollapsed ? (
                                 <Tooltip key={index} delayDuration={0}>
                                     <TooltipTrigger asChild>
@@ -43,13 +42,13 @@ export function Nav({ links, isCollapsed }: NavProps) {
                                             href={link.href}
                                             className={cn(
                                                 buttonVariants({ variant: link.href === pathname ? "default" : "ghost", size: "icon" }),
-                                                "h-9 w-9",
+                                                "h-9 w-9 flex items-center justify-center group",
                                                 link.href === pathname
                                                     ? "bg-[#e84c3d] text-white"
                                                     : "bg-transparent text-gray-700 hover:bg-[#e84c3d] hover:text-white",
                                             )}
                                         >
-                                            <link.icon className="h-4 w-4" />
+                                            <link.icon className="h-4 w-4 transition-colors duration-200 group-hover:text-white" />
                                             <span className="sr-only">{link.title}</span>
                                         </Link>
                                     </TooltipTrigger>
@@ -75,24 +74,17 @@ export function Nav({ links, isCollapsed }: NavProps) {
                                         "flex items-center justify-start rounded-md p-2 hover:bg-[#e84c3d] hover:text-white"
                                     )}
                                 >
-                                    {link.imageSrc ? (
-                                        <Image
-                                            src={link.imageSrc}
-                                            alt={link.title}
-                                            width={24}
-                                            height={24}
-                                            className="mr-2"
-                                        />
-                                    ) : (
+                                    {
                                         link.icon && (
                                             <link.icon
                                                 className={cn(
-                                                    "mr-2 h-4 w-4 hover:text-white",
+                                                    "mr-2 h-4 w-4 transition-colors duration-200",
+                                                    "hover:text-white", // Applies white color on hover
                                                     link.href === pathname ? "text-white" : "text-gray-700"
                                                 )}
                                             />
                                         )
-                                    )}
+                                    }
                                     {link.title}
                                     {link.label && (
                                         <span

@@ -69,19 +69,19 @@ export const SideNavbar = (props: Props) => {
           },
           {
             title: "Manage Accounts & Reporting",
-            href: '/manageaccounts',
+            href: '/dashboard/manageaccount',
             icon: BarChart,
             variant: "ghost",
           },
           {
             title: "Manage CMS",
-            href: '/managecms',
+            href: '/dashboard/managecms',
             icon: Edit,
             variant: "ghost",
           },
           {
             title: "Manage Setting",
-            href: '/managesetting',
+            href: '/dashboard/managesetting',
             icon: Settings,
             variant: "ghost",
           },

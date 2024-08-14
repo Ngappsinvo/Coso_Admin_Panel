@@ -3,9 +3,7 @@ import { DataTable } from "@/components/ui/DataTable";
 import PageTitle from "@/components/ui/PageTitle";
 import SearchBar from "@/components/ui/Searchbar";
 import { ColumnDef } from "@tanstack/react-table";
-// import { EyeIcon, ViewIcon } from "lucide-react";
-import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
-import Image from "next/image";
+import { AiOutlineEye } from 'react-icons/ai';
 import Link from "next/link";
 
 export default function ManageCustomer() {
