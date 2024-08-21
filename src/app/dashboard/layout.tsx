@@ -13,7 +13,7 @@ const Dashboardlayout: React.FC<DashboardLayoutProps> = (props) => {
         {/* SideNavbar */}
         <SideNavbar />
         {/* main page */}
-        <div className="w-full">{props.children}</div>
+        <div className="w-full max-h-screen overflow-auto">{props.children}</div>
       </div>
     
     </>

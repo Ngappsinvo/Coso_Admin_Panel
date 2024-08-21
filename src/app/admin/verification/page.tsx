@@ -1,13 +1,17 @@
 "use client"
 import Image from 'next/image';
 import React, { useState, useRef, useEffect, ChangeEvent, KeyboardEvent, RefCallback } from 'react';
-import { AiOutlineMail } from 'react-icons/ai';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Verification() {
     const [otp, setOtp] = useState(['', '', '', '', '', '']);
     const [timer, setTimer] = useState(60); // Timer in seconds
     const [isTimerActive, setIsTimerActive] = useState(true);
+    const [otpError, setOtpError] = useState<string>(''); // State for OTP validation error
     const inputs = useRef<HTMLInputElement[]>([]);
+
+    const correctOtp = '123456'; // Hardcoded correct OTP for demonstration
 
     useEffect(() => {
         if (isTimerActive) {
@@ -34,6 +38,7 @@ export default function Verification() {
         if (e.target.value && index < 5) {
             inputs.current[index + 1]?.focus();
         }
+        setOtpError(''); // Clear error when user starts typing
     };
 
     const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>, index: number) => {
@@ -52,9 +57,30 @@ export default function Verification() {
         }
     };
 
+    const handleSubmit = () => {
+        const enteredOtp = otp.join('');
+
+        // Validate if all OTP fields are filled
+        if (otp.some(value => value === '')) {
+            setOtpError('Please enter all 6 digits of the OTP.');
+            return;
+        }
+
+        // Check if the entered OTP matches the correct OTP
+        if (enteredOtp === correctOtp) {
+            toast.success('OTP verified successfully!');  // Show success toast
+            // You can add further logic here, such as redirecting the user
+            return;
+        } else {
+            setOtpError('The OTP you entered is incorrect. Please try again.');
+        }
+    };
+
     const resendCode = () => {
         setIsTimerActive(true);
         setTimer(60); // Reset timer to 60 seconds
+        setOtp(['', '', '', '', '', '']); // Clear OTP input fields
+        setOtpError(''); // Clear any previous errors
         // Add code to resend the OTP
     };
 
@@ -65,8 +91,7 @@ export default function Verification() {
                 <Image
                     src="/bg.png"
                     alt="Background Image"
-                    layout="fill"
-                    // objectFit="cover"
+                    fill
                     quality={100}
                 />
             </div>
@@ -92,12 +117,12 @@ export default function Verification() {
                                 value={value}
                                 onChange={(e) => handleChange(e, index)}
                                 onKeyDown={(e) => handleKeyDown(e, index)}
-                                className='w-12 h-12 text-center border border-gray-300 rounded-full text-lg focus:outline-none'
+                                className={`w-12 h-12 text-center border rounded-full text-lg focus:outline-none ${otpError ? 'border-red-500' : 'border-gray-300'}`}
                                 ref={setRef}
                             />
                         ))}
                     </div>
-
+                    {otpError && <p className='text-red-500 text-center text-xs mt-2 font-semibold'>{otpError}</p>} {/* OTP Error Message */}
                     {/* Timer */}
                     <div className='my-7 text-center text-sm text-gray-600'>
                         {isTimerActive ? (
@@ -107,18 +132,22 @@ export default function Verification() {
 
                     {/* Submit Button */}
                     <div>
-                        <button className='w-full bg-[#e84c3d] rounded-md p-2 text-white shadow-lg'>Submit</button>
+                        <button onClick={handleSubmit} className='w-full bg-[#e84c3d] rounded-md p-2 text-white shadow-lg'>Submit</button>
                     </div>
                     <div className='mt-5 text-center text-sm text-gray-600'>
                         {isTimerActive ? (
-                            <button onClick={resendCode} className='font-semibold'>Resend the code again</button>
-
+                            <button onClick={resendCode} className='font-semibold' disabled>
+                                Resend the code again
+                            </button>
                         ) : (
-                            <button onClick={resendCode} className='text-[#e84c3d] font-semibold'>Resend the code again</button>
+                            <button onClick={resendCode} className='text-[#e84c3d] font-semibold'>
+                                Resend the code again
+                            </button>
                         )}
                     </div>
                 </div>
             </div>
+            <ToastContainer />
         </div>
-    )
+    );
 }
